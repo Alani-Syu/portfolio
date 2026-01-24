@@ -442,7 +442,7 @@ function handleStaggeredScroll() {
   if (!leftCol || !rightCol || !worksSection) return;
   const rect = worksSection.getBoundingClientRect();
   const windowHeight = window.innerHeight || document.documentElement.clientHeight;
-  if (rect.top < windowHeight && rect.bottom > 0 && window.innerWidth >= 1024) {
+  if (rect.top < windowHeight && rect.bottom > 0 && window.innerWidth >= 768) {
     const scrollY = window.scrollY || window.pageYOffset;
     const sectionTop = worksSection.offsetTop;
     const sectionHeight = worksSection.offsetHeight;
@@ -466,17 +466,9 @@ window.addEventListener("resize", handleStaggeredScroll);
 document.addEventListener("DOMContentLoaded", handleStaggeredScroll);
 const video = document.getElementById("main-video");
 const loading = document.getElementById("loading-overlay");
-const path = window.location.pathname || "";
-const isEnIndex = path === "/en/" || path === "/en/index.html" || path.startsWith("/en/index");
-if (isEnIndex && loading) {
-  loading.style.display = "none";
-  sessionStorage.setItem("indexLoaded", "1");
-  window.addEventListener("load", () => {
-    loadAOS();
-  });
-} else if (video && sessionStorage.getItem("indexLoaded") !== "1") {
+if (video && sessionStorage.getItem("indexLoaded") !== "1") {
   video.addEventListener("canplaythrough", () => {
-    if (loading) loading.classList.add("hide");
+    loading.classList.add("hide");
     sessionStorage.setItem("indexLoaded", "1");
     setTimeout(() => {
       loadAOS();
@@ -498,4 +490,3 @@ function loadAOS() {
     offset: 100
   });
 }
-//# sourceMappingURL=index2.js.map

@@ -607,10 +607,6 @@
     height: 100%;
   }
 
-  .w-1\/2 {
-    width: 50%;
-  }
-
   .w-6 {
     width: calc(var(--spacing) * 6);
   }
@@ -625,10 +621,6 @@
 
   .w-16 {
     width: calc(var(--spacing) * 16);
-  }
-
-  .w-80 {
-    width: calc(var(--spacing) * 80);
   }
 
   .w-\[28px\] {
@@ -661,10 +653,6 @@
 
   .max-w-\[340px\] {
     max-width: 340px;
-  }
-
-  .max-w-\[483px\] {
-    max-width: 483px;
   }
 
   .max-w-\[785px\] {
@@ -762,10 +750,6 @@
     gap: calc(var(--spacing) * 4);
   }
 
-  .gap-5 {
-    gap: calc(var(--spacing) * 5);
-  }
-
   .gap-x-\[30px\] {
     column-gap: 30px;
   }
@@ -841,10 +825,6 @@
 
   .bg-\[\#EFECF733\]\/20 {
     background-color: oklab(94.8581% .00716651 -.0131658 / .04);
-  }
-
-  .bg-black {
-    background-color: var(--color-black);
   }
 
   .bg-dark {
@@ -953,10 +933,6 @@
 
   .object-cover {
     object-fit: cover;
-  }
-
-  .object-center {
-    object-position: center;
   }
 
   .p-1 {
@@ -1090,9 +1066,9 @@
     font-size: 180px;
   }
 
-  .leading-6 {
-    --tw-leading: calc(var(--spacing) * 6);
-    line-height: calc(var(--spacing) * 6);
+  .leading-5 {
+    --tw-leading: calc(var(--spacing) * 5);
+    line-height: calc(var(--spacing) * 5);
   }
 
   .font-semibold {
@@ -1204,20 +1180,12 @@
       border-width: 1px;
     }
 
-    .hover\:border-black:hover {
-      border-color: var(--color-black);
-    }
-
     .hover\:border-primary:hover {
       border-color: var(--color-primary);
     }
 
     .hover\:bg-white:hover {
       background-color: var(--color-white);
-    }
-
-    .hover\:text-black:hover {
-      color: var(--color-black);
     }
 
     .hover\:text-primary:hover {
@@ -1244,10 +1212,6 @@
 
     .lg\:mt-23 {
       margin-top: calc(var(--spacing) * 23);
-    }
-
-    .lg\:mr-4 {
-      margin-right: calc(var(--spacing) * 4);
     }
 
     .lg\:mb-22\.5 {
@@ -1448,14 +1412,10 @@ section {
   animation: 60s linear infinite move-rtl;
 }
 .bg-wrapper {
-  will-change: transform;
-  width: 100%;
   display: flex;
   overflow: hidden;
-  transform: translateZ(0);
 }
 .bg-wrapper .bg-img {
-  will-change: transform;
   flex-shrink: 0;
   flex-basis: 1780px;
   animation: 30s linear infinite move-rtl;
